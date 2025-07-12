@@ -18,7 +18,7 @@ https.get(url, (res) => {
 
       const newData = {
         lastUpdated: new Date().toISOString(),
-        value: apiData.value // Adjust according to actual API structure
+        value: apiData // Adjust according to actual API structure
       };
 
       fs.writeFileSync('data.json', JSON.stringify(newData, null, 2));
