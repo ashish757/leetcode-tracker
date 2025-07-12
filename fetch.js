@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 
-const url = 'https://api.example.com/data'; // Replace with your API URL
+const url = 'https://leetcode-stats-api.herokuapp.com/ashish757'; // Replace with your API URL
 
 https.get(url, (res) => {
   let data = '';
