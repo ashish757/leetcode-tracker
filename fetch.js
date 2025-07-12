@@ -1,34 +1,43 @@
 const https = require('https');
 const fs = require('fs');
 
-const url = 'https://leetcode-stats-api.herokuapp.com/ashish757'; // Replace with your API URL
+const url = 'https://leetcode-stats-api.herokuapp.com/ashish757'; 
 
 https.get(url, (res) => {
   let data = '';
 
-  // Concatenate chunks of data
   res.on('data', (chunk) => {
     data += chunk;
   });
 
-  // On complete response
   res.on('end', () => {
     try {
-      const apiData = JSON.parse(data);
+      const parsed = JSON.parse(data);
 
-      const newData = {
-        lastUpdated: new Date().toISOString(),
-        value: apiData // Adjust according to actual API structure
+      // Read existing data.json if it exists
+      let existing = [];
+      if (fs.existsSync('data.json')) {
+        const raw = fs.readFileSync('data.json', 'utf-8');
+        existing = JSON.parse(raw);
+      }
+
+      // Append new entry
+      const newEntry = {
+        timestamp: new Date().toISOString(),
+        value: parsed.value || parsed // adjust to your actual API structure
       };
 
-      fs.writeFileSync('data.json', JSON.stringify(newData, null, 2));
-      console.log('Data written to data.json');
+      existing.push(newEntry);
+
+      // Write back to file
+      fs.writeFileSync('data.json', JSON.stringify(existing, null, 2));
+      console.log('Data appended!');
     } catch (err) {
       console.error('Error parsing or writing data:', err);
       process.exit(1);
     }
   });
 }).on('error', (err) => {
-  console.error('HTTP request failed:', err);
+  console.error('HTTP error:', err);
   process.exit(1);
 });
