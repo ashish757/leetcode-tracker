@@ -1,4 +1,4 @@
-name: Daily API Fetch
+name: fetch
 
 on:
   schedule:
