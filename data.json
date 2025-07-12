@@ -1,3 +1,29 @@
 {
-  "lastUpdated": "2025-07-12T04:19:12.200Z"
+  "lastUpdated": "2025-07-12T04:33:38.747Z",
+  "value": {
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 29,
+    "totalQuestions": 3611,
+    "easySolved": 13,
+    "totalEasy": 885,
+    "mediumSolved": 14,
+    "totalMedium": 1878,
+    "hardSolved": 2,
+    "totalHard": 848,
+    "acceptanceRate": 76.44,
+    "ranking": 2766456,
+    "contributionPoints": 57,
+    "reputation": 0,
+    "submissionCalendar": {
+      "1748995200": 25,
+      "1749081600": 9,
+      "1749168000": 6,
+      "1749254400": 17,
+      "1749686400": 3,
+      "1749945600": 4,
+      "1750118400": 7,
+      "1752105600": 8
+    }
+  }
 }
