@@ -192,5 +192,34 @@
       "1752105600": 8,
       "1752624000": 2
     }
+  },
+  {
+    "timestamp": 1752811098565,
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 31,
+    "totalQuestions": 3617,
+    "easySolved": 13,
+    "totalEasy": 885,
+    "mediumSolved": 16,
+    "totalMedium": 1881,
+    "hardSolved": 2,
+    "totalHard": 851,
+    "acceptanceRate": 76.97,
+    "ranking": 2680299,
+    "contributionPoints": 61,
+    "reputation": 0,
+    "submissionCalendar": {
+      "1748995200": 25,
+      "1749081600": 9,
+      "1749168000": 6,
+      "1749254400": 17,
+      "1749686400": 3,
+      "1749945600": 4,
+      "1750118400": 7,
+      "1752105600": 8,
+      "1752624000": 2,
+      "1752710400": 2
+    }
   }
 ]
