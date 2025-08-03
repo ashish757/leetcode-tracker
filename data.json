@@ -656,5 +656,23 @@
       "1752883200": 2,
       "1753920000": 1
     }
+  },
+  {
+    "timestamp": 1754194074606,
+    "status": "error",
+    "message": "timeout",
+    "totalSolved": 0,
+    "totalQuestions": 0,
+    "easySolved": 0,
+    "totalEasy": 0,
+    "mediumSolved": 0,
+    "totalMedium": 0,
+    "hardSolved": 0,
+    "totalHard": 0,
+    "acceptanceRate": 0,
+    "ranking": 0,
+    "contributionPoints": 0,
+    "reputation": 0,
+    "submissionCalendar": {}
   }
 ]
