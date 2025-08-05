@@ -706,5 +706,38 @@
       "1752883200": 2,
       "1753920000": 1
     }
+  },
+  {
+    "timestamp": 1754366798935,
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 35,
+    "totalQuestions": 3640,
+    "easySolved": 16,
+    "totalEasy": 888,
+    "mediumSolved": 17,
+    "totalMedium": 1893,
+    "hardSolved": 2,
+    "totalHard": 859,
+    "acceptanceRate": 77.01,
+    "ranking": 2587478,
+    "contributionPoints": 67,
+    "reputation": 0,
+    "submissionCalendar": {
+      "1748995200": 25,
+      "1749081600": 9,
+      "1749168000": 6,
+      "1749254400": 17,
+      "1749686400": 3,
+      "1749945600": 4,
+      "1750118400": 7,
+      "1752105600": 8,
+      "1752624000": 2,
+      "1752710400": 2,
+      "1752796800": 1,
+      "1752883200": 2,
+      "1753920000": 1,
+      "1754265600": 5
+    }
   }
 ]
