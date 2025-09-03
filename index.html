@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="gradient-text">LeetCode</span> Progress Tracker
+                </h1>
+                <p class="hero-description">
+                    This only tracks my rank for now, but soon it will be able to track other peoples rank as well. Feel free to contribute to this project.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#stats" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i>
+                        View Analytics
+                    </a>
+                    <a href="https://github.com/ashish757/leetcode-rank-tracker" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
 
+                        View On GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Current Stats Section -->
+        <section id="stats" class="section stats-section">
+            <div class="container">
+                <div>
+                    <h2 class="section-title" data-aos="fade-up">My Stats</h2>
+                </div>
+                <div class="current-stats" data-aos="fade-up">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-solved">0</span>
+                        <span class="stat-label">Problems Solved</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="current-rank">0</span>
+                        <span class="stat-label">Current Rank</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="acceptance-rate">0%</span>
+                        <span class="stat-label">Acceptance Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking Trends -->
+        <section class="section ranking-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Ranking Trends</h2>
+                <div class="ranking-grid">
+                    <div class="ranking-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Rank Progress Over Time</h3>
+                        <div class="chart-container">
+                            <canvas id="rankChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="ranking-stats" data-aos="fade-up" data-aos-delay="200">
+                        <div class="ranking-stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <span class="stat-value" id="best-rank">Loading...</span>
+                                <span class="stat-desc">Best Rank</span>
+                            </div>
+                        </div>
+                        <div class="ranking-stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <span class="stat-value" id="rank-change">Loading...</span>
+                                <span class="stat-desc">Rank Change</span>
+                            </div>
+                        </div>
+                        <div class="ranking-stat-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <span class="stat-value" id="contribution-points">Loading...</span>
+                                <span class="stat-desc">Contribution Points</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questions Progress Over Time -->
+        <section class="section questions-progress-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Questions Solved Over Time</h2>
+                <div class="questions-progress-grid">
+                    <div class="questions-chart-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Total Questions Progress</h3>
+                        <div class="chart-container">
+                            <canvas id="questionsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="questions-stats" data-aos="fade-up" data-aos-delay="200">
+                        <div class="questions-stat-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <span class="stat-value" id="total-questions-solved">Loading...</span>
+                                <span class="stat-desc">Total Solved</span>
+                            </div>
+                        </div>
+                        <div class="questions-stat-item">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <span class="stat-value" id="questions-streak">Loading...</span>
+                                <span class="stat-desc">Current Streak</span>
+                            </div>
+                        </div>
+                        <div class="questions-stat-item">
+                            <i class="fas fa-calendar-day"></i>
+                            <div>
+                                <span class="stat-value" id="avg-questions-per-day">Loading...</span>
+                                <span class="stat-desc">Avg per Day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Overview -->
+        <section class="section progress-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Progress Overview</h2>
+                <div class="progress-grid">
+                    <div class="progress-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Problem Distribution</h3>
+                        <div class="chart-container">
+                            <canvas id="problemChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="progress-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Difficulty Breakdown</h3>
+                        <div class="difficulty-bars">
+                            <div class="difficulty-item">
+                                <div class="difficulty-header">
+                                    <span class="difficulty-label easy">Easy</span>
+                                    <span class="difficulty-count" id="easy-count">0/0</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill easy" id="easy-progress"></div>
+                                </div>
+                            </div>
+                            <div class="difficulty-item">
+                                <div class="difficulty-header">
+                                    <span class="difficulty-label medium">Medium</span>
+                                    <span class="difficulty-count" id="medium-count">0/0</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill medium" id="medium-progress"></div>
+                                </div>
+                            </div>
+                            <div class="difficulty-item">
+                                <div class="difficulty-header">
+                                    <span class="difficulty-label hard">Hard</span>
+                                    <span class="difficulty-count" id="hard-count">0/0</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill hard" id="hard-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LeetCode Progress Tracker. Built with ❤️ by 
+                <a href="https://github.com/ashish757" target="_blank">Ashish</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

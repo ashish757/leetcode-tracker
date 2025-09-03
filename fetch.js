@@ -36,10 +36,12 @@ https.get(url, (res) => {
       // "reputation": 1,
       // "submissionCalendar": {}
 
-      // Append new entry
+      // Append new entry (excluding submissionCalendar)
+      const { submissionCalendar, ...dataWithoutCalendar } = parsed;
+      
       const newEntry = {
         timestamp: new Date().getTime(),
-        ...parsed // adjust to your actual API structure
+        ...dataWithoutCalendar // spread all fields except submissionCalendar
       };
 
       existing.push(newEntry);
