@@ -904,7 +904,6 @@
     "contributionPoints": 84,
     "reputation": 0
   },
-  
   {
     "timestamp": 1756869943000,
     "status": "success",
@@ -921,7 +920,7 @@
     "ranking": 2138241,
     "contributionPoints": 86,
     "reputation": 0
- },
+  },
   {
     "timestamp": 1756956355453,
     "status": "success",
@@ -938,6 +937,22 @@
     "ranking": 2168241,
     "contributionPoints": 86,
     "reputation": 0
- }
-
+  },
+  {
+    "timestamp": 1757184082087,
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 48,
+    "totalQuestions": 3671,
+    "easySolved": 22,
+    "totalEasy": 895,
+    "mediumSolved": 23,
+    "totalMedium": 1911,
+    "hardSolved": 3,
+    "totalHard": 865,
+    "acceptanceRate": 76.04,
+    "ranking": 2173181,
+    "contributionPoints": 86,
+    "reputation": 0
+  }
 ]
