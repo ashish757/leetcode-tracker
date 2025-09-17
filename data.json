@@ -1097,5 +1097,22 @@
     "ranking": 2127261,
     "contributionPoints": 88,
     "reputation": 0
+  },
+  {
+    "timestamp": 1758134746413,
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 50,
+    "totalQuestions": 3686,
+    "easySolved": 22,
+    "totalEasy": 899,
+    "mediumSolved": 25,
+    "totalMedium": 1918,
+    "hardSolved": 3,
+    "totalHard": 869,
+    "acceptanceRate": 75.91,
+    "ranking": 2130769,
+    "contributionPoints": 88,
+    "reputation": 0
   }
 ]
