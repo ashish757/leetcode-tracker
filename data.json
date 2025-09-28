@@ -1257,5 +1257,22 @@
     "error": "Internal Server Error",
     "message": "",
     "path": "/ashish757"
+  },
+  {
+    "timestamp": 1759084903092,
+    "status": "success",
+    "message": "retrieved",
+    "totalSolved": 51,
+    "totalQuestions": 3700,
+    "easySolved": 22,
+    "totalEasy": 904,
+    "mediumSolved": 25,
+    "totalMedium": 1923,
+    "hardSolved": 4,
+    "totalHard": 873,
+    "acceptanceRate": 76.13,
+    "ranking": 2118620,
+    "contributionPoints": 93,
+    "reputation": 0
   }
 ]
