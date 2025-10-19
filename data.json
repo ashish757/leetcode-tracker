@@ -1614,5 +1614,12 @@
     "ranking": 2147175,
     "contributionPoints": 93,
     "reputation": 0
+  },
+  {
+    "timestamp": "2025-10-19T18:42:55.329+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "",
+    "path": "/ashish757"
   }
 ]
